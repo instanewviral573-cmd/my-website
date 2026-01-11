@@ -522,7 +522,9 @@
             <div class="cta-section">
                 <h2 class="cta-title">Ready for More?</h2>
                 <div class="cta-buttons">
-                    <a href="#" class="cta-btn cta-primary" onclick="continueToPartner()">Continue to Partner Site</a>
+                    <a href="https://t.me/YourBotUsername" target="_blank" rel="noopener noreferrer" class="cta-btn cta-primary telegram-main-btn">
+                        📥 Download on Telegram
+                    </a>
                     <a href="index.html" class="cta-btn cta-secondary">Explore Similar Content</a>
                 </div>
             </div>
@@ -559,6 +561,7 @@
 
     <script src="js/ad-integration.js"></script>
     <script src="js/lazy-load.js"></script>
+    <script src="js/analytics.js"></script>
     <script>
         // Age verification logic
         document.addEventListener('DOMContentLoaded', function() {
@@ -616,6 +619,12 @@
                         <span>PREVIEW</span>
                     </div>
                     <div class="related-title">${item.title}</div>
+                    <a href="https://t.me/YourBotUsername" target="_blank" rel="noopener noreferrer" class="telegram-btn-small">
+                        📥 Download
+                    </a>
+                    <div class="telegram-disclaimer-small">
+                        Continue on Telegram
+                    </div>
                 `;
                 
                 grid.appendChild(card);
@@ -623,14 +632,11 @@
         }
         
         function viewRelatedContent(id) {
-            localStorage.setItem('currentContentId', id);
-            window.location.reload();
+            // Redirect to Telegram instead of reloading
+            window.location.href = 'https://t.me/YourBotUsername';
         }
         
-        function continueToPartner() {
-            // This would redirect to partner site in real implementation
-            alert('This would redirect to the partner site in a real implementation');
-        }
+
     </script>
 </body>
 </html>

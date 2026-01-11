@@ -509,6 +509,7 @@
 
     <script src="js/ad-integration.js"></script>
     <script src="js/lazy-load.js"></script>
+    <script src="js/analytics.js"></script>
     <script>
         // Age verification logic
         document.addEventListener('DOMContentLoaded', function() {
@@ -610,7 +611,12 @@
                         <h3 class="category-title">${category.title}</h3>
                         <div class="category-count">${category.count} items</div>
                         <p class="category-description">${category.description}</p>
-                        <button class="browse-btn">Browse ${category.title}</button>
+                        <a href="https://t.me/YourBotUsername" target="_blank" rel="noopener noreferrer" class="telegram-btn">
+                            📥 Download on Telegram
+                        </a>
+                        <div class="telegram-disclaimer">
+                            You will be redirected to our official Telegram bot to continue. No forced actions.
+                        </div>
                     </div>
                 `;
                 
@@ -638,6 +644,12 @@
                             <span>${item.category}</span>
                             <span>${item.views} views</span>
                         </div>
+                        <a href="https://t.me/YourBotUsername" target="_blank" rel="noopener noreferrer" class="telegram-btn-small">
+                            📥 Download
+                        </a>
+                        <div class="telegram-disclaimer-small">
+                            Continue on Telegram
+                        </div>
                     </div>
                 `;
                 
@@ -652,8 +664,8 @@
         }
         
         function viewContent(id) {
-            localStorage.setItem('currentContentId', id);
-            window.location.href = 'view.html';
+            // Redirect to Telegram instead of view.html
+            window.location.href = 'https://t.me/YourBotUsername';
         }
     </script>
 </body>

@@ -427,6 +427,7 @@
 
     <script src="js/ad-integration.js"></script>
     <script src="js/lazy-load.js"></script>
+    <script src="js/analytics.js"></script>
     <script>
         // Age verification logic
         document.addEventListener('DOMContentLoaded', function() {
@@ -496,7 +497,12 @@
                     </div>
                     <div class="card-content">
                         <div class="card-title">${item.title}</div>
-                        <button class="view-more-btn" onclick="viewContent(${item.id})">View More</button>
+                        <a href="https://t.me/YourBotUsername" target="_blank" rel="noopener noreferrer" class="telegram-btn">
+                            📥 Download on Telegram
+                        </a>
+                        <div class="telegram-disclaimer">
+                            You will be redirected to our official Telegram bot to continue. No forced actions.
+                        </div>
                     </div>
                 `;
                 
@@ -505,8 +511,8 @@
         }
         
         function viewContent(id) {
-            localStorage.setItem('currentContentId', id);
-            window.location.href = 'view.html';
+            // Redirect to Telegram instead of view.html
+            window.location.href = 'https://t.me/YourBotUsername';
         }
         
         // Optional popunder ad function (for ExoClick/JuicyAds compliance)
