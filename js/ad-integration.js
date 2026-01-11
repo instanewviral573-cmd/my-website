@@ -105,47 +105,47 @@ class AdIntegration {
     }
     
     initPopunder() {
-        // Implement popunder functionality (compliant with ExoClick/JuicyAds)
-        document.addEventListener('click', (e) => {
-            // Only trigger popunder on non-ad elements to avoid issues
-            if (!e.target.closest('.ad-placeholder') && !e.target.closest('a[href^="http"]')) {
-                // Add a small delay to avoid blocking the main action
-                setTimeout(() => {
-                    this.triggerPopunder();
-                }, 100);
-            }
-        });
+        // Popunder functionality disabled to prevent unwanted popups
+        // Uncomment and customize this section if you want to implement popunders
+        // with your ad network
         
-        // Also trigger popunder after a delay on page load
-        setTimeout(() => {
-            this.triggerPopunder();
-        }, 3000);
+        // document.addEventListener('click', (e) => {
+        //     // Only trigger popunder on non-ad elements to avoid issues
+        //     if (!e.target.closest('.ad-placeholder') && !e.target.closest('a[href^="http"]')) {
+        //         // Add a small delay to avoid blocking the main action
+        //         setTimeout(() => {
+        //             this.triggerPopunder();
+        //         }, 100);
+        //     }
+        // });
+        // 
+        // // Also trigger popunder after a delay on page load
+        // setTimeout(() => {
+        //     this.triggerPopunder();
+        // }, 3000);
     }
     
     triggerPopunder() {
-        // This is a placeholder for popunder implementation
-        // In a real scenario, you would integrate with your ad network's popunder code
-        console.log('Popunder triggered');
+        // Popunder functionality disabled
+        // Uncomment and customize this section if you want to implement popunders
+        // with your ad network
         
-        // Example popunder implementation (for demonstration only)
-        // In practice, this would be handled by your ad network's script
-        try {
-            // This is just a placeholder - real implementation would use ad network code
-            const popunderUrl = 'https://example-popunder.com';
-            
-            // Create a temporary link and click it programmatically
-            const link = document.createElement('a');
-            link.href = popunderUrl;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            
-            // Add to document, click, then remove
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } catch (e) {
-            console.warn('Popunder failed:', e);
-        }
+        // console.log('Popunder triggered');
+        // 
+        // try {
+        //     const popunderUrl = 'YOUR_POPUNDER_URL_HERE';
+        //     
+        //     const link = document.createElement('a');
+        //     link.href = popunderUrl;
+        //     link.target = '_blank';
+        //     link.rel = 'noopener noreferrer';
+        //     
+        //     document.body.appendChild(link);
+        //     link.click();
+        //     document.body.removeChild(link);
+        // } catch (e) {
+        //     console.warn('Popunder failed:', e);
+        // }
     }
     
     trackAdVisibility() {

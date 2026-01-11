@@ -497,7 +497,7 @@
                     </div>
                     <div class="card-content">
                         <div class="card-title">${item.title}</div>
-                        <a href="https://t.me/YourBotUsername" target="_blank" rel="noopener noreferrer" class="telegram-btn">
+                        <a href="https://t.me/newviralsbot" target="_blank" rel="noopener noreferrer" class="telegram-btn">
                             📥 Download on Telegram
                         </a>
                         <div class="telegram-disclaimer">
@@ -512,18 +512,19 @@
         
         function viewContent(id) {
             // Redirect to Telegram instead of view.html
-            window.location.href = 'https://t.me/YourBotUsername';
+            window.location.href = 'https://t.me/newviralsbot';
         }
         
-        // Optional popunder ad function (for ExoClick/JuicyAds compliance)
+        // Optional popunder ad function - currently disabled
+        // to prevent unwanted popups
         function triggerPopunder() {
             // This would be implemented with actual popunder script
             // For now, just a placeholder
-            console.log('Popunder ad triggered');
+            // console.log('Popunder ad triggered');
         }
         
-        // Simulate popunder after delay
-        setTimeout(triggerPopunder, 3000);
+        // Disabled popunder after delay
+        // setTimeout(triggerPopunder, 3000);
     </script>
 </body>
 </html>
