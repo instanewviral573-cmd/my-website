@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AdultHub.com</title>
+    <meta name="description" content="Contact AdultHub.com for business inquiries. Professional contact form for advertisers and partners.">
+    <meta name="keywords" content="contact, business, inquiry, advertiser, partner, adult content">
+    <link rel="canonical" href="https://yourdomain.com/contact.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ads.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Us",
+      "description": "Contact page for AdultHub.com",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AdultHub.com"
+      },
+      "url": "https://yourdomain.com/contact.html"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Age Verification Modal */
+        .age-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        
+        .age-modal-content {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        
+        .age-modal h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .age-modal p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .age-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .age-btn-enter {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .age-btn-exit {
+            background: #333;
+            color: white;
+        }
+        
+        .age-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #000, #222, #000);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #ff0000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ff0000;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #cc0000;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .content-section {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-card h4 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        
+        .contact-card a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+        
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #cc0000;
+        }
+        
+        .form-note {
+            font-size: 14px;
+            color: #ffcc00;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        /* Ad Banner */
+        .ad-banner {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            margin: 20px auto 30px;
+            max-width: 1200px;
+        }
+        
+        .ad-placeholder {
+            width: 100%;
+            height: 90px;
+            background: linear-gradient(45deg, #333, #444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border: 1px dashed #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid #ff0000;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff0000;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Hidden class for content when age verification fails */
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <h2>⚠️ AGE VERIFICATION REQUIRED</h2>
+            <p>You must be 18 years of age or older to enter this site. By entering, you certify that you are 18 years of age or older and agree to our Terms and Conditions.</p>
+            <p>This site contains adult material intended for adults only. Please confirm your age to continue.</p>
+            <div class="age-buttons">
+                <button class="age-btn age-btn-enter" onclick="enterSite()">I AM 18+ AND AGREE</button>
+                <button class="age-btn age-btn-exit" onclick="exitSite()">I AM UNDER 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until age verified) -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">AdultHub.com</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            
+            <!-- Ad Banner -->
+            <div class="ad-banner">
+                <div id="contact-ad" class="ad-placeholder">
+                    [AD PLACEHOLDER - CONTACT PAGE AD]
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title">Business Inquiries Only</h2>
+                
+                <div class="contact-info">
+                    <p>Thank you for your interest in AdultHub.com. This contact form is intended for business inquiries only, including advertising partnerships, content collaboration, and other professional matters.</p>
+                    
+                    <p>For all other inquiries, please note that we do not provide customer support for individual users or content-related questions.</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <h4>Email</h4>
+                        <a href="mailto:business@adulthub.com">business@adulthub.com</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>Advertising</h4>
+                        <a href="mailto:ads@adulthub.com">ads@adulthub.com</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>Legal</h4>
+                        <a href="mailto:legal@adulthub.com">legal@adulthub.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiryType">Inquiry Type *</label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">Select an option</option>
+                                <option value="advertising">Advertising Partnership</option>
+                                <option value="content">Content Collaboration</option>
+                                <option value="business">Business Development</option>
+                                <option value="legal">Legal Inquiry</option>
+                                <option value="other">Other Business Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        
+                        <p class="form-note">By submitting this form, you confirm that you are 18+ and that your inquiry is business-related.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="copyright">
+                    © 2026 AdultHub.com. All rights reserved. This site contains adult material intended for users 18+ only.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/ad-integration.js"></script>
+    <script src="js/lazy-load.js"></script>
+    <script>
+        // Age verification logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageVerified = localStorage.getItem('ageVerified');
+            
+            if (!ageVerified) {
+                document.getElementById('ageModal').style.display = 'flex';
+            } else {
+                document.getElementById('ageModal').style.display = 'none';
+                document.getElementById('mainContent').classList.remove('hidden');
+            }
+            
+            // Set up form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitForm();
+            });
+        });
+        
+        function enterSite() {
+            localStorage.setItem('ageVerified', 'true');
+            document.getElementById('ageModal').style.display = 'none';
+            document.getElementById('mainContent').classList.remove('hidden');
+        }
+        
+        function exitSite() {
+            window.location.href = 'https://www.google.com';
+        }
+        
+        function submitForm() {
+            // In a real implementation, this would send the form data to a server
+            // For now, we'll just show a success message
+            alert('Thank you for your inquiry. We will review your message and respond if appropriate. Please note that we only respond to business-related inquiries.');
+            
+            // Reset the form
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>

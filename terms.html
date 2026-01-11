@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - AdultHub.com</title>
+    <meta name="description" content="Terms and Conditions for AdultHub.com. Legal agreements and disclaimers for using our adult content platform.">
+    <meta name="keywords" content="terms, conditions, legal, disclaimers, adult content, 18+">
+    <link rel="canonical" href="https://yourdomain.com/terms.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ads.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms and Conditions",
+      "description": "Terms and conditions for AdultHub.com",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AdultHub.com"
+      },
+      "url": "https://yourdomain.com/terms.html"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Age Verification Modal */
+        .age-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        
+        .age-modal-content {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        
+        .age-modal h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .age-modal p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .age-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .age-btn-enter {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .age-btn-exit {
+            background: #333;
+            color: white;
+        }
+        
+        .age-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #000, #222, #000);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #ff0000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ff0000;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #cc0000;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .content-section {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .terms-content h3 {
+            font-size: 18px;
+            color: #ffcc00;
+            margin: 20px 0 10px 0;
+        }
+        
+        .terms-content p {
+            margin-bottom: 15px;
+        }
+        
+        .terms-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .terms-content li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #ff0000;
+            margin: 15px 0;
+        }
+        
+        .warning {
+            background: #330000;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #ff0000;
+            margin: 15px 0;
+            border: 1px solid #660000;
+        }
+        
+        /* Ad Banner */
+        .ad-banner {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            margin: 20px auto 30px;
+            max-width: 1200px;
+        }
+        
+        .ad-placeholder {
+            width: 100%;
+            height: 90px;
+            background: linear-gradient(45deg, #333, #444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border: 1px dashed #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid #ff0000;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff0000;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Hidden class for content when age verification fails */
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <h2>⚠️ AGE VERIFICATION REQUIRED</h2>
+            <p>You must be 18 years of age or older to enter this site. By entering, you certify that you are 18 years of age or older and agree to our Terms and Conditions.</p>
+            <p>This site contains adult material intended for adults only. Please confirm your age to continue.</p>
+            <div class="age-buttons">
+                <button class="age-btn age-btn-enter" onclick="enterSite()">I AM 18+ AND AGREE</button>
+                <button class="age-btn age-btn-exit" onclick="exitSite()">I AM UNDER 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until age verified) -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">AdultHub.com</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+
+        <div class="container">
+            <h1 class="page-title">Terms and Conditions</h1>
+            
+            <!-- Ad Banner -->
+            <div class="ad-banner">
+                <div id="terms-ad" class="ad-placeholder">
+                    [AD PLACEHOLDER - TERMS AND CONDITIONS AD]
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <div class="terms-content">
+                    <h2 class="section-title">Terms and Conditions for AdultHub.com</h2>
+                    
+                    <p><strong>Last Updated:</strong> January 11, 2026</p>
+                    
+                    <p>Welcome to AdultHub.com. These terms and conditions outline the rules and regulations for the use of AdultHub.com's Website, located at https://yourdomain.com.</p>
+                    
+                    <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use AdultHub.com if you do not agree to all of the terms stated on this page.</p>
+                    
+                    <h3>18+ Confirmation Responsibility</h3>
+                    
+                    <p>By accessing and using this website, you hereby confirm and warrant that:</p>
+                    
+                    <ul>
+                        <li>You are at least 18 years old (or the age of majority in your jurisdiction)</li>
+                        <li>You have the legal right to access adult content in your location</li>
+                        <li>You are legally permitted to view adult materials in your jurisdiction</li>
+                        <li>You are accessing this content voluntarily and willingly</li>
+                        <li>You understand that this site contains adult content that may be offensive to some viewers</li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <strong>WARNING:</strong> This website contains explicit adult content. If you are under 18, if it is illegal to view such content in your location, or if you find such content objectionable, please exit this website immediately.
+                    </div>
+                    
+                    <h3>Intellectual Property Rights</h3>
+                    
+                    <p>Unless otherwise stated, AdultHub.com and/or its licensors own the intellectual property rights for all material on AdultHub.com. All intellectual property rights are reserved. You may access this from AdultHub.com for your own personal use subjected to restrictions set in these terms and conditions.</p>
+                    
+                    <p>You must not:</p>
+                    
+                    <ul>
+                        <li>Republish material from AdultHub.com</li>
+                        <li>Sell, rent, or sub-license material from AdultHub.com</li>
+                        <li>Reproduce, duplicate, or copy material from AdultHub.com</li>
+                        <li>Redistribute content from AdultHub.com</li>
+                    </ul>
+                    
+                    <h3>Links to Other Websites</h3>
+                    
+                    <p>Our Service may contain links to third-party websites or services that are not owned or controlled by AdultHub.com.</p>
+                    
+                    <p>AdultHub.com has no control over and assumes no responsibility for the content, privacy policies, or practices of any third-party websites or services. We do not warrant the offerings of these entities/individuals or their websites.</p>
+                    
+                    <p>You acknowledge and agree that AdultHub.com shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such third-party websites or services.</p>
+                    
+                    <div class="highlight">
+                        <strong>External Links Disclaimer:</strong> We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.
+                    </div>
+                    
+                    <h3>No Hosting of Illegal Content</h3>
+                    
+                    <p>AdultHub.com does not host any content displayed on this website. All content is served through external sources and links. We do not have direct control over the nature, content, and availability of third-party content.</p>
+                    
+                    <p>We do not represent or guarantee that:</p>
+                    
+                    <ul>
+                        <li>All content available on the site is legal in your jurisdiction</li>
+                        <li>The content providers comply with all applicable laws</li>
+                        <li>Any content accessed through our site is free from viruses or malware</li>
+                        <li>The accuracy, completeness, or reliability of any linked content</li>
+                    </ul>
+                    
+                    <p>If you become aware of any content that is illegal or violates these terms, please contact us immediately so we can investigate and take appropriate action.</p>
+                    
+                    <h3>Limitations of Liability</h3>
+                    
+                    <p>In no event shall AdultHub.com, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses resulting from:</p>
+                    
+                    <ul>
+                        <li>Your access to or use of the service</li>
+                        <li>Any conduct or content of any third party on the service</li>
+                        <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+                        <li>Any content obtained from the service</li>
+                        <li>Unauthorized access to, use of, or alteration of your transmissions or content</li>
+                    </ul>
+                    
+                    <h3>Disclaimer of Warranties</h3>
+                    
+                    <p>Your use of the service is at your sole risk. The service is provided on an "AS IS" and "AS AVAILABLE" basis. The service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
+                    
+                    <p>AdultHub.com its subsidiaries, affiliates, and its licensors do not warrant that:</p>
+                    
+                    <ul>
+                        <li>The service will function uninterrupted, secure, or available at any particular time or location</li>
+                        <li>Any content or software available through the service is accurate, reliable, or correct</li>
+                        <li>The quality of any products, services, information, or other material purchased or obtained by you through the service will meet your expectations</li>
+                        <li>Any errors in the service will be corrected</li>
+                    </ul>
+                    
+                    <h3>External Content and Services</h3>
+                    
+                    <p>Our website may include content and services provided by third parties, including advertisements, promotions, and links to other websites. These third parties have their own privacy policies and terms of service. We recommend that you review their policies to understand how your personal information will be used by such parties.</p>
+                    
+                    <p>Our website may contain sponsored content. Such content is clearly identified as sponsored or advertisement. The views expressed in such content are those of the sponsor or advertiser and do not necessarily reflect the views of AdultHub.com.</p>
+                    
+                    <h3>Age Verification Systems</h3>
+                    
+                    <p>We implement age verification systems to ensure compliance with legal requirements for adult content distribution. However, you acknowledge and agree that:</p>
+                    
+                    <ul>
+                        <li>Our age verification systems are for compliance purposes only</li>
+                        <li>You are solely responsible for confirming your eligibility to access adult content</li>
+                        <li>Technical failures in verification systems do not absolve you of age requirements</li>
+                        <li>You will not hold us liable if age verification systems fail</li>
+                    </ul>
+                    
+                    <h3>Changes to Terms</h3>
+                    
+                    <p>We reserve the right, at our sole discretion, to modify or replace these terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                    
+                    <p>By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service.</p>
+                    
+                    <h3>Termination</h3>
+                    
+                    <p>We may terminate or suspend access to our service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the terms.</p>
+                    
+                    <p>Upon termination, your right to use the service will immediately cease.</p>
+                    
+                    <h3>Governing Law</h3>
+                    
+                    <p>These terms shall be governed and construed in accordance with the laws of the jurisdiction where AdultHub.com is registered, without regard to its conflict of law provisions.</p>
+                    
+                    <p>Our failure to enforce any right or provision of these terms will not be considered a waiver of those rights. If any provision of these terms is held to be invalid or unenforceable by a court, the remaining provisions of these terms will remain in effect.</p>
+                    
+                    <h3>Contact Us</h3>
+                    
+                    <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+                    
+                    <ul>
+                        <li><strong>Email:</strong> legal@adulthub.com</li>
+                        <li><strong>Website:</strong> https://yourdomain.com/contact.html</li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <strong>IMPORTANT:</strong> By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please exit this website immediately.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="copyright">
+                    © 2026 AdultHub.com. All rights reserved. This site contains adult material intended for users 18+ only.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/ad-integration.js"></script>
+    <script src="js/lazy-load.js"></script>
+    <script>
+        // Age verification logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageVerified = localStorage.getItem('ageVerified');
+            
+            if (!ageVerified) {
+                document.getElementById('ageModal').style.display = 'flex';
+            } else {
+                document.getElementById('ageModal').style.display = 'none';
+                document.getElementById('mainContent').classList.remove('hidden');
+            }
+        });
+        
+        function enterSite() {
+            localStorage.setItem('ageVerified', 'true');
+            document.getElementById('ageModal').style.display = 'none';
+            document.getElementById('mainContent').classList.remove('hidden');
+        }
+        
+        function exitSite() {
+            window.location.href = 'https://www.google.com';
+        }
+    </script>
+</body>
+</html>

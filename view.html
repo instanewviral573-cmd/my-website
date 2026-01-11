@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Content Preview - Premium Adult Entertainment</title>
+    <meta name="description" content="Adult content preview. Exclusive adult entertainment content. 18+ only.">
+    <meta name="keywords" content="adult, preview, content, entertainment, exclusive, 18+">
+    <link rel="canonical" href="https://yourdomain.com/view.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ads.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Adult Content Preview",
+      "description": "Exclusive adult content preview",
+      "author": {
+        "@type": "Organization",
+        "name": "Adult Content Hub"
+      },
+      "datePublished": "2026-01-11",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Adult Content Hub"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Age Verification Modal */
+        .age-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        
+        .age-modal-content {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        
+        .age-modal h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .age-modal p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .age-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .age-btn-enter {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .age-btn-exit {
+            background: #333;
+            color: white;
+        }
+        
+        .age-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #000, #222, #000);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #ff0000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ff0000;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #cc0000;
+        }
+        
+        /* Content Preview Section */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .preview-section {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .preview-title {
+            font-size: 28px;
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+        
+        .preview-media {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            background: linear-gradient(45deg, #333, #444);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .preview-media::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><circle cx="50" cy="50" r="30" fill="%23444"/></svg>') center/cover;
+            filter: blur(2px);
+        }
+        
+        .blur-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+        }
+        
+        .preview-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #222;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 24px;
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-primary {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: #333;
+            color: white;
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Native Ad Below Preview */
+        .ad-native {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        
+        .ad-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #333, #444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border: 1px dashed #666;
+            border-radius: 5px;
+        }
+        
+        /* Bottom Banner Ad */
+        .ad-banner-bottom {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            margin: 30px auto 20px;
+            max-width: 1200px;
+        }
+        
+        /* Related Content */
+        .related-content {
+            margin-top: 40px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .related-card {
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .related-image {
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(45deg, #333, #444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .related-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23333"/><circle cx="50" cy="50" r="20" fill="%23444"/></svg>') center/cover;
+            filter: blur(1px);
+        }
+        
+        .related-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+        }
+        
+        .related-title {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            height: 50px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid #ff0000;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff0000;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Hidden class for content when age verification fails */
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .preview-media {
+                height: 300px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .related-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <h2>⚠️ AGE VERIFICATION REQUIRED</h2>
+            <p>You must be 18 years of age or older to enter this site. By entering, you certify that you are 18 years of age or older and agree to our Terms and Conditions.</p>
+            <p>This site contains adult material intended for adults only. Please confirm your age to continue.</p>
+            <div class="age-buttons">
+                <button class="age-btn age-btn-enter" onclick="enterSite()">I AM 18+ AND AGREE</button>
+                <button class="age-btn age-btn-exit" onclick="exitSite()">I AM UNDER 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until age verified) -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">AdultHub.com</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+
+        <div class="container">
+            <!-- Content Preview -->
+            <div class="preview-section">
+                <h1 class="preview-title" id="previewTitle">Adult Content Preview</h1>
+                
+                <div class="preview-media">
+                    <div class="blur-overlay"></div>
+                    <span>CONTENT PREVIEW</span>
+                </div>
+                
+                <div class="preview-description" id="previewDescription">
+                    <p>Experience the captivating allure of this exclusive adult content preview. Our premium collection features intimate moments captured in stunning detail, designed to tantalize your senses and ignite your passions.</p>
+                    
+                    <p>Indulge in carefully curated scenes that showcase the artistry of adult entertainment. From passionate encounters to sensual explorations, our content creators bring fantasies to life with unparalleled skill and dedication.</p>
+                    
+                    <p>Each piece in our collection represents hours of meticulous production, featuring professional performers who bring authenticity and genuine chemistry to every scene. The cinematography captures both the raw emotion and aesthetic beauty of intimate human connections.</p>
+                    
+                    <p>Discover why discerning viewers choose our platform for premium adult entertainment. We pride ourselves on delivering high-quality content that respects both performers and audience members alike.</p>
+                </div>
+            </div>
+            
+            <!-- Native Ad Below Preview -->
+            <div class="ad-native">
+                <div id="native-ad" class="ad-placeholder">
+                    [AD PLACEHOLDER - NATIVE AD BELOW PREVIEW]
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2 class="cta-title">Ready for More?</h2>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn cta-primary" onclick="continueToPartner()">Continue to Partner Site</a>
+                    <a href="index.html" class="cta-btn cta-secondary">Explore Similar Content</a>
+                </div>
+            </div>
+            
+            <!-- Bottom Banner Ad -->
+            <div class="ad-banner-bottom">
+                <div id="footer-ad" class="ad-placeholder">
+                    [AD PLACEHOLDER - BANNER AT BOTTOM]
+                </div>
+            </div>
+            
+            <!-- Related Content -->
+            <div class="related-content">
+                <h2 class="section-title">Explore Similar Content</h2>
+                <div class="related-grid" id="relatedGrid">
+                    <!-- Related content will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="copyright">
+                    © 2026 AdultHub.com. All rights reserved. This site contains adult material intended for users 18+ only.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/ad-integration.js"></script>
+    <script src="js/lazy-load.js"></script>
+    <script>
+        // Age verification logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageVerified = localStorage.getItem('ageVerified');
+            
+            if (!ageVerified) {
+                document.getElementById('ageModal').style.display = 'flex';
+            } else {
+                document.getElementById('ageModal').style.display = 'none';
+                document.getElementById('mainContent').classList.remove('hidden');
+            }
+            
+            // Load content based on current item
+            loadContent();
+            generateRelatedContent();
+        });
+        
+        function enterSite() {
+            localStorage.setItem('ageVerified', 'true');
+            document.getElementById('ageModal').style.display = 'none';
+            document.getElementById('mainContent').classList.remove('hidden');
+        }
+        
+        function exitSite() {
+            window.location.href = 'https://www.google.com';
+        }
+        
+        function loadContent() {
+            const contentId = localStorage.getItem('currentContentId') || 1;
+            document.getElementById('previewTitle').textContent = `Premium Adult Content #${contentId}`;
+        }
+        
+        // Sample related content data
+        const relatedContent = [
+            { id: 1, title: "Sultry Evenings" },
+            { id: 2, title: "Passionate Encounters" },
+            { id: 3, title: "Midnight Delights" },
+            { id: 4, title: "Intimate Moments" },
+            { id: 5, title: "Desire Unleashed" },
+            { id: 6, title: "Erotic Fantasies" }
+        ];
+        
+        function generateRelatedContent() {
+            const grid = document.getElementById('relatedGrid');
+            grid.innerHTML = '';
+            
+            relatedContent.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'related-card';
+                card.onclick = () => viewRelatedContent(item.id);
+                
+                card.innerHTML = `
+                    <div class="related-image">
+                        <div class="related-blur"></div>
+                        <span>PREVIEW</span>
+                    </div>
+                    <div class="related-title">${item.title}</div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        function viewRelatedContent(id) {
+            localStorage.setItem('currentContentId', id);
+            window.location.reload();
+        }
+        
+        function continueToPartner() {
+            // This would redirect to partner site in real implementation
+            alert('This would redirect to the partner site in a real implementation');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AdultHub.com</title>
+    <meta name="description" content="Privacy Policy for AdultHub.com. Information about cookies, third-party ads, and user data usage.">
+    <meta name="keywords" content="privacy, policy, cookies, third-party ads, user data, adult content">
+    <link rel="canonical" href="https://yourdomain.com/privacy-policy.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ads.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy",
+      "description": "Privacy policy for AdultHub.com",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AdultHub.com"
+      },
+      "url": "https://yourdomain.com/privacy-policy.html"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Age Verification Modal */
+        .age-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        
+        .age-modal-content {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        
+        .age-modal h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .age-modal p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .age-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .age-btn-enter {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .age-btn-exit {
+            background: #333;
+            color: white;
+        }
+        
+        .age-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #000, #222, #000);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #ff0000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ff0000;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #cc0000;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .content-section {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .policy-content h3 {
+            font-size: 18px;
+            color: #ffcc00;
+            margin: 20px 0 10px 0;
+        }
+        
+        .policy-content p {
+            margin-bottom: 15px;
+        }
+        
+        .policy-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .policy-content li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #ff0000;
+            margin: 15px 0;
+        }
+        
+        /* Ad Banner */
+        .ad-banner {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            margin: 20px auto 30px;
+            max-width: 1200px;
+        }
+        
+        .ad-placeholder {
+            width: 100%;
+            height: 90px;
+            background: linear-gradient(45deg, #333, #444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border: 1px dashed #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid #ff0000;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff0000;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Hidden class for content when age verification fails */
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <h2>⚠️ AGE VERIFICATION REQUIRED</h2>
+            <p>You must be 18 years of age or older to enter this site. By entering, you certify that you are 18 years of age or older and agree to our Terms and Conditions.</p>
+            <p>This site contains adult material intended for adults only. Please confirm your age to continue.</p>
+            <div class="age-buttons">
+                <button class="age-btn age-btn-enter" onclick="enterSite()">I AM 18+ AND AGREE</button>
+                <button class="age-btn age-btn-exit" onclick="exitSite()">I AM UNDER 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until age verified) -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">AdultHub.com</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+
+        <div class="container">
+            <h1 class="page-title">Privacy Policy</h1>
+            
+            <!-- Ad Banner -->
+            <div class="ad-banner">
+                <div id="privacy-ad" class="ad-placeholder">
+                    [AD PLACEHOLDER - PRIVACY POLICY AD]
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <div class="policy-content">
+                    <h2 class="section-title">Privacy Policy for AdultHub.com</h2>
+                    
+                    <p><strong>Last Updated:</strong> January 11, 2026</p>
+                    
+                    <p>This Privacy Policy describes how AdultHub.com ("we", "us", or "our") collects, uses, and shares personal information when you visit our website located at https://yourdomain.com (the "Site").</p>
+                    
+                    <h3>Information Collection and Use</h3>
+                    
+                    <p>We collect information that you provide directly to us when you use our Site. This includes:</p>
+                    
+                    <ul>
+                        <li><strong>Information You Provide:</strong> We do not actively collect personal information from users. However, your IP address and browsing behavior may be collected by third-party advertising networks as described below.</li>
+                        <li><strong>Technical Information:</strong> We may automatically collect certain technical information about your device and usage of our Site, such as your IP address, browser type, operating system, and pages viewed.</li>
+                        <li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar technologies to enhance your experience on our Site. Cookies are small data files stored on your device that help us remember your preferences and analyze Site traffic.</li>
+                    </ul>
+                    
+                    <h3>Cookies Usage</h3>
+                    
+                    <p>Our Site uses cookies for various purposes:</p>
+                    
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> These cookies are necessary for the Site to function properly and enable basic features.</li>
+                        <li><strong>Performance Cookies:</strong> These cookies help us understand how visitors interact with our Site by collecting and reporting information anonymously.</li>
+                        <li><strong>Functional Cookies:</strong> These cookies enable enhanced functionality and personalization on our Site.</li>
+                        <li><strong>Advertising Cookies:</strong> These cookies may be used by third-party advertising networks to serve ads that are relevant to your interests.</li>
+                    </ul>
+                    
+                    <p>You can control cookies through your browser settings. However, disabling cookies may affect the functionality of our Site.</p>
+                    
+                    <div class="highlight">
+                        <strong>Cookie Consent:</strong> By continuing to use our Site, you consent to the use of cookies as described in this Privacy Policy.
+                    </div>
+                    
+                    <h3>Third-Party Advertising Networks</h3>
+                    
+                    <p>We partner with various advertising networks to monetize our Site, including but not limited to:</p>
+                    
+                    <ul>
+                        <li><strong>ExoClick S.A.</strong> - A leading ad network specializing in adult content monetization.</li>
+                        <li><strong>JuicyAds.com</strong> - An advertising platform focused on adult entertainment content.</li>
+                        <li><strong>TrafficJunky</strong> - A digital advertising marketplace serving targeted ads.</li>
+                        <li><strong>Other Third-Party Advertisers</strong> - We may work with other advertising partners to provide relevant content and advertisements.</li>
+                    </ul>
+                    
+                    <p>These third-party advertising networks may use cookies, web beacons, and other tracking technologies to collect information about your activities on our Site and other websites. This information may be used to serve targeted advertisements and measure the effectiveness of ad campaigns.</p>
+                    
+                    <p>Third-party advertising networks may collect information such as:</p>
+                    
+                    <ul>
+                        <li>Your IP address</li>
+                        <li>Browsing history and preferences</li>
+                        <li>Device and browser information</li>
+                        <li>Geographic location (approximate)</li>
+                        <li>Demographic information</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <strong>Important:</strong> We do not have access to or control over the cookies and tracking technologies used by third-party advertising networks. Please review the privacy policies of these third parties for more information about their practices.
+                    </div>
+                    
+                    <h3>User Data Disclaimer</h3>
+                    
+                    <p>We want to be completely transparent about our approach to user data:</p>
+                    
+                    <ul>
+                        <li><strong>No Personal Data Storage:</strong> We do not store any personally identifiable information about our users.</li>
+                        <li><strong>Third-Party Collection:</strong> Any personal data collection is performed solely by our advertising partners, not by us directly.</li>
+                        <li><strong>Anonymous Analytics:</strong> We may use analytics services to understand general usage patterns, but these do not identify individual users.</li>
+                        <li><strong>Data Sharing:</strong> We do not sell, trade, or rent user personal identification information to others.</li>
+                        <li><strong>Age Verification:</strong> We implement age verification systems to ensure compliance with adult content regulations, but we do not store age verification results.</li>
+                    </ul>
+                    
+                    <h3>How We Use Information</h3>
+                    
+                    <p>The information we collect is used to:</p>
+                    
+                    <ul>
+                        <li>Operate and improve our Site</li>
+                        <li>Provide and maintain our services</li>
+                        <li>Understand and analyze how our Site is used</li>
+                        <li>Develop new products, services, features, and functionality</li>
+                        <li>Monitor the usage of our Site</li>
+                        <li>Detect, prevent, and address technical issues</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                    
+                    <h3>Data Security</h3>
+                    
+                    <p>The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security.</p>
+                    
+                    <h3>Children's Privacy</h3>
+                    
+                    <p>Our Site is intended for adults aged 18 and over. We do not knowingly collect personally identifiable information from children. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us so that we can take necessary steps to remove such information.</p>
+                    
+                    <h3>Third-Party Links</h3>
+                    
+                    <p>Our Site may contain links to third-party websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+                    
+                    <p>We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    
+                    <h3>Changes to This Privacy Policy</h3>
+                    
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                    
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    
+                    <h3>Contact Us</h3>
+                    
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                    
+                    <ul>
+                        <li><strong>Email:</strong> privacy@adulthub.com</li>
+                        <li><strong>Website:</strong> https://yourdomain.com/contact.html</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <strong>Age Requirement:</strong> By accessing our Site, you confirm that you are at least 18 years old or the age of majority in your jurisdiction and have the right to access adult content.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="copyright">
+                    © 2026 AdultHub.com. All rights reserved. This site contains adult material intended for users 18+ only.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/ad-integration.js"></script>
+    <script src="js/lazy-load.js"></script>
+    <script>
+        // Age verification logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const ageVerified = localStorage.getItem('ageVerified');
+            
+            if (!ageVerified) {
+                document.getElementById('ageModal').style.display = 'flex';
+            } else {
+                document.getElementById('ageModal').style.display = 'none';
+                document.getElementById('mainContent').classList.remove('hidden');
+            }
+        });
+        
+        function enterSite() {
+            localStorage.setItem('ageVerified', 'true');
+            document.getElementById('ageModal').style.display = 'none';
+            document.getElementById('mainContent').classList.remove('hidden');
+        }
+        
+        function exitSite() {
+            window.location.href = 'https://www.google.com';
+        }
+    </script>
+</body>
+</html>
